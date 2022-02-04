@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garden Net</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/fav.png">
+</head>
+<body>
+    <div id="logoDiv">
+        <img src="img/fav.png" class="logoImg" alt="G">
+        <label class="logoTxt">Garden Net</label>
+    </div>
+<!--
+    <div id="PostBox">
+        <h1 style="font-family:sans-serif;display:flex;">No internet connection.</h1>
+    </div>
+-->
+    
+<div id="postCreaterDiv">
+    <div id="entryContainDiv">
+        <input type="text" placeholder="enter your post title" id="postTitleEntry">
+        <input type="button" value=">>>" onclick="sent()" id="sentBtn">
+    </div>
+    <div id="postBody">
+        <textarea id="postBody"></textarea>
+    </div>
+</div>
+
+<div id="startDiv">
+    <div id="chooserDiv">
+        <button id="loginChoose" class="chooseButton" onclick="changeO('login')">LogIn</button>
+        <button id="signupChoose" class="chooseButton" onclick="changeO('signup')">SignUp</button>
+    </div>
+    <div id="logInDiv" class="commonDiv">
+        <h2 class="commonTitle">Log In</h2>
+        <input type="number" id="idLogIn" placeholder="userID" class="inBox" name="username">
+        <input type="password" id="passwordLogIn" placeholder="password" class="inBox" name="username">
+        <div class="passwordDiv">
+            <input type="checkbox" onclick="shpd()"><label>show password</label>
+        </div>
+        <button class="commonBtn" onclick="LogIn()">Log In</button>
+    </div>
+    <div id="signUpDiv" class="commonDiv">
+        <h2 class="commonTitle">Sign Up</h2>
+        <input type="text" id="usernameSignUp" placeholder="username" class="inBox">
+        <input type="password" id="passwordSignUp" placeholder="password" class="inBox">
+        <input type="password" id="passwordSignUpAgain" placeholder="type your password again" class="inBox">
+        <input type="text" id="emailSignUp" placeholder="email" class="inBox">
+        <div class="passwordDiv">
+            <input type="checkbox" onclick="shpdsu()"><label>show password</label>
+        </div>
+        <button class="commonBtn" onclick="SignUp()" >Sign Up</button>
+    </div>
+</div>
+<div id="dashBoard" class="commonDiv">
+    <h2 class="commonTitle" id="usernameDB">T-T</h2>
+    <h3 class="commonTitleLittle" id="idDB">---</h3>
+    <iframe id="otherUsersDiv" src="explorer.html"></iframe>
+</div>
+
+</body>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+<script src="uicontrol.js"></script>
+<script src="style.js"></script>
+<script src="script.js"></script>
+</html>
