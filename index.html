@@ -5,13 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Garden Net</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/fav.png">
 </head>
 <body>
     <div id="logoDiv">
-        <img src="img/fav.png" class="logoImg" alt="G">
+        <div>
+            <img src="img/fav.png" class="logoImg" alt="G">
         <label class="logoTxt">Garden Net</label>
+        </div>
+        <div class="dropdown" id="menu" style="display:none;">
+            <h3><span class="commonTitleLittleWLM">menu</span></h3>
+            <div class="dropdown-content">
+            <a onclick="LogOut()">LogOut</a>
+            </div>
+        </div>
     </div>
 <!--
     <div id="PostBox">
@@ -68,5 +76,5 @@
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
 <script src="uicontrol.js"></script>
 <script src="style.js"></script>
-<script src="script.js"></script>
+<script src="script.min.js"></script>
 </html>
