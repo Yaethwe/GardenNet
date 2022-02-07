@@ -17,7 +17,7 @@
         <div class="dropdown" id="menu" style="display:none;">
             <h3><span class="commonTitleLittleWLM">menu</span></h3>
             <div class="dropdown-content">
-            <a onclick="LogOut()">LogOut</a>
+            <a onclick="LogOut()" class="commonMenu">LogOut</a>
             </div>
         </div>
     </div>
@@ -63,7 +63,8 @@
         <button class="commonBtn" onclick="SignUp()" >Sign Up</button>
     </div>
 </div>
-<div id="dashBoard" class="commonDiv">
+<div id="dashBoard" class="commonHDiv">
+    <img src="" id="pP" calss="profilePicture">
     <h2 class="commonTitle" id="usernameDB">T-T</h2>
     <h3 class="commonTitleLittle" id="idDB">---</h3>
     <iframe id="otherUsersDiv" src="explorer.html"></iframe>
@@ -74,7 +75,6 @@
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
-<script src="uicontrol.js"></script>
-<script src="style.js"></script>
+<script src="uicontrol.min.js"></script>
 <script src="script.min.js"></script>
 </html>
