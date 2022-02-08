@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create | Gardener Net</title>
+    <link rel="icon" href="img/fav.png">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .creator{
+            display:flex;
+            flex-direction: column;
+            border-radius: 10px;
+            width:90%;
+            height:700px;
+            background-color:white;
+            padding: 10px;
+            box-shadow: 5px 5px 10px 5px #888888;
+        }
+        
+        .creatorHead{
+            width:100%;
+            display:flex;
+            align-self:center;
+        }
+        
+        .creatorBody{
+            width:100%;
+            display:flex;
+            flex-direction: column;
+            align-self:center;
+        }
+    </style>
+</head>
+
+<body>
+<div id="creator" class="creator">
+    <div calss="creatorHead"><h2 style="color:orange;font-family: sans-serif;">Post Creator</h2></div>
+    <div calss="creatorBody">
+        <button style="color:white;background-color: blue;border-radius: 10px;border:0.5px;" onclick="post()">POST</button>
+        <hr>
+        <input type="text" id="postTitleCT" placeholder="Enter your post title" style="width:100%;">
+        <br>
+        <textarea id="postBodyCT" placeholder="Enter your post body text" style="width:100%;height:500px;resize: none;"></textarea>
+    </div>
+</div>
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+<script src="create.min.js"></script>
+
+</html>
