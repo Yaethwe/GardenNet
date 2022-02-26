@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Garden Net</title>
-    <link rel="stylesheet" href="styles.min.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="img/fav.png">
 </head>
 <body>
@@ -24,14 +24,7 @@
             <a onclick="LogOut()" class="commonMenu">LogOut</a>
             </div>
         </div>
-    </div>
-
-<!--
-    <div id="PostBox">
-        <h1 style="font-family:sans-serif;display:flex;">No internet connection.</h1>
-    </div>
--->
-    
+    </div>  
 <div id="postCreaterDiv">
     <div id="entryContainDiv">
         <input type="text" placeholder="enter your post title" id="postTitleEntry">
@@ -75,16 +68,20 @@
     <iframe id="otherUsersDiv" src="explorer.html"></iframe>
     <iframe id="creatorDiv" ssrc="create.html"></iframe>
 </div>
-<footer>
-    <hr>
-    <label style="color:blue">CopyRight© 2021 Garden Net</label>
-    <a target="_blank" href="https://programmerclass.netlify.app"><label style="color:orange">Powered By ProgrammerCalss</label></a>
+<div>
+<hr>
+</div>
+<footer class="footer">
+	<div id="copyrightDiv">
+    <label style="color:white">CopyRight© 2021 Garden Net</label>
+    <label style="color:orange">Powered By <a target="_blank" href="https://programmerclass.netlify.app" style="color:gold">ProgrammerCalss</a></label>
+	</div>
 </footer>
 </body>
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
-<script src="uicontrol.min.js"></script>
-<script src="script.min.js"></script>
+<script src="uicontrol.js"></script>
+<script src="script.js"></script>
 </html>
