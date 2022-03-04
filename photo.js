@@ -64,3 +64,4 @@ document.getElementById('import').onclick = e => {
 		title.textContent=ImagesName+' - ImageViewer';
 	});
 }
+alert('You can only upload png images.');
