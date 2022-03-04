@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<title>GardenNet-Image Uploader</title>
+<link rel="stylesheet" href="photo.css">
+</head>
+<body>
+<center>
+<div id="main">
+	<div id="imgNameDiv"><label>Image Name </label><input id="namebox" type="text" class="txt"></div><br><br>
+	<img id="myimg"> <label id="UpProgress"></label><br><br>
+	<div id="btnContain">
+	<button class="actionBtn" id="select">Select Image</button>
+	<button class="actionBtn" id="upload">Upload Image</button>
+	<button class="actionBtn" id="import">Import Image</button>
+	</div>
+	<div id="imgNameDiv"><label>Image Address </label><input id="addressbox" type="text" class="txt"></div>
+</div>
+</center>
+</body>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+<script src="photo.js"></script>
+</html>

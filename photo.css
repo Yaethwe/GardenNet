@@ -1,0 +1,52 @@
+#myimg{
+	display:flex;
+	width:100%;
+	min-height:300px;
+	margin:-2px;
+	border:2px solid orange;
+	background-color:white;
+}
+#btnContain{
+	display:flex;
+	border: 0px;
+	background-color:orange;
+	width:100%;
+	justify-content:space-around;
+}
+
+.actionBtn{
+	background-color:blue;
+	color:white;
+	border:0px;
+	width:33.33%;
+}
+.actionBtn:hover{
+	background-color:skyblue;
+	color:white;
+	border:0px;
+	width:33.33%;
+}
+
+#main{
+	display:flex;
+	flex-direction:column;
+	background-color:orange;
+	padding:25px;
+	width:50%;
+	border-radius:20px;
+	justify-content:center;
+	box-shadow: 10px 5px 10px 5px gray;
+}
+
+#imgNameDiv{
+	display:flex;
+	justify-content:flex-start;
+	background-color:orange;
+	color:white;
+	border:2px solid orange;
+	padding:2px;
+}
+
+.txt{
+	width:90%;
+}
