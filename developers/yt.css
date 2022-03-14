@@ -28,43 +28,45 @@
 	display:flex;
 	justify-content: space-between;
 	background-color: whitesmoke;
-	color:balck;
+	color:black; /*error balck*/
 	padding:10px;
 	margin-bottom: 0.5%;
 }
 .darksmokeBG{
-	display:flex;
-	justify-content: space-between;
 	background-color: rgb(59, 59, 59);
 	color:white;
 	padding:10px;
 	margin-bottom: 0.5%;
+	display:flex;
+	justify-content: space-between;
 }
 .whiteBG{
 	display: flex;
 	flex-direction: column;
 	background-color: white;
-	color:balck;
+	color:black; /*error balck*/
 	padding:10px;
 	margin-bottom: 0.5%;
 }
 .darkBG{
 	background-color: rgb(65, 47, 47);
 	background-image: unset;
-	display: flex;
+	/*display: flex;*/
 	padding:10px;
 	margin-bottom: 0.5%;
 }
+#aside,#main{
+	flex-direction: column;
+}
 .bodyDiv{
-	background-color: white;
+	/*background-color: white;*/
 	padding:10px;
 	margin-bottom: 0.5%;
 	display:flex;
-	flex-direction: row;
 	justify-content: space-between;
 }
 .fo{
 	font-family:sans-serif;
-	color:black;
+	/*color:black;*/
 	font-size: 16px;
 }
