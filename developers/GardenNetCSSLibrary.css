@@ -1,0 +1,66 @@
+/*
+    <div class="container">
+        <div class="theme-switch-wrapper">
+            <label for="checkbox" class="theme-switch">
+                <input onclick="LDM()" type="checkbox" id="checkbox">
+                <div class="slider round"></div>
+            </label>
+            <em>Switch Mode!</em>
+        </div>
+*/
+
+
+.dark-mode{
+    background-color: #333;
+    color: #fff;
+}
+/*Light-Dark Mode Switch*/
+.theme-switch-wrapper{
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+}
+.theme-switch-wrapper em{
+    margin-left: 10px;
+}
+.theme-switch{
+    width: 60px;
+    height: 34px;
+    position: relative;
+}
+.theme-switch input{
+    display: none;
+}
+
+.slider {
+    background: #ccc;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+.slider::before{
+    content: '';
+    position: absolute;
+    background: #fff;
+    bottom: 4px;
+    left: 4px;
+    height: 26px;
+    width: 26px;
+    transition: all ease 0.4s;
+}
+input:checked + .slider{
+    background: #66bb6a;
+}
+input:checked + .slider::before{
+    transform: translateX(26px);
+}
+
+.slider.round{
+    border-radius: 34px;
+}
+.slider.round::before{
+    border-radius: 50%;
+}

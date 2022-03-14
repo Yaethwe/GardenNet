@@ -4,31 +4,41 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" href="../img/fav.png">
+	<link rel="icon" href="../img/logo.png">
+	<link rel="stylesheet" href="GardenNetCSSLibrary.css">
 	<link rel="stylesheet" href="yt.css">
 	<link rel='stylesheet' href="../styles.css">
 	<title>Developers - GardenNet</title>
 </head>
-<body class="fo" style="background-image: none; background-color: rgb(231, 230, 230);">
-	<div id='nav' class="whitesmokeBG"><label class="logoTxt" style="color:orange;">Developers - GardenNet</label></div>
-	<div id="bodyDiv" class="bodyDiv">
+<body style="background-color: rgb(231, 230, 230);">
+	<div id='nav' class="whitesmokeBG fo">
+		<label class="logoTxt" style="color:orange;">Developers - GardenNet</label>
+		<div class="theme-switch-wrapper">
+            <label for="checkbox" class="theme-switch">
+                <input onclick="LDM()" type="checkbox" id="checkbox">
+                <div class="slider round"></div>
+            </label>
+            <em>Dark Mode</em>
+        </div>
+	</div>
+	<div id="bodyDiv" class="bodyDiv fo">
 		<div id='menu' class="whiteBG">
 			<ol>
 				<li><a>GardenNet Login library</a></li>
 				<li><a>Explorer Useages</a></li>
 			</ol>
 		</div>
-		<div id='main' class="whiteBG" style="display: block;">
+		<div id='main' class="whiteBG">
 			<div id="liGLL">
 				<h1 class="logoTxt" style="color:blue;">GardenNet Login Library</h1>
-				<p>GardenNet Login Library is a plugin for other websites which we want them to login with GardenNet account but however user registation is only works in our <a href="https://gardennet.netlify.app">GardenNet</a> website.</p>
+				<p>GardenNet Login Library is a plugin for other websites which we want them to login with a GardenNet account but however user registration only works in our <a href="https://gardennet.netlify.app">GardenNet</a> website.</p>
 			</div>
-			<div id="liEU" style="flex-direction: column;">
-				<h1 class="logoTxt" style="color:blue;">Explorer Useages</h1>
-				<p>You can go to the Explorer just <a href="https://gardennet.netlify.app/explorer">clicking here</a> however it's can't be work because you didn't filled the <i>gid</i> and <i>gname</i> parameters. "gid" parameter was used to set the UserID of the author. "gname" parameter was used to set the Title of the post that created in the author's post box.</p>
+			<div id="liEU" >
+				<h1 class="logoTxt" style="color:blue;">Explorer Usages</h1>
+				<p>You can go to the Explorer just by clicking <a href="https://gardennet.netlify.app/explorer"> here</a> however it can't work because you didn't fill in the <i>gid</i> and <i>gname</i> parameters. "gid" parameter was used to set the UserID of the author. "gname" parameter was used to set the UserID of the author. "gname" parameter was used to set the Title of the post that was created in the author's post box.</p>
 			</div>
 		</div>
-		<div id='aside' class="whiteBG" style="flex-direction: column;">
+		<div id='aside' class="whiteBG">
 			<label class="logoTxt" style="color:purple;">Relative Web Apps</label>
 			<ul>
 				<li><a href="https://gardennet.netlify.app"><img src="../img/fav.png" width="50px"> GardenNet</a></li>
@@ -39,7 +49,10 @@
 	<div id='footer' class="whitesmokeBG">
 		<label>Copy Right &copy; 2022 GardenNet </label>
 	</div>
-	<a href="https://gardennet.netlify.app"><img src="../img/fav.png" width="50px"> GardenNet</a>
+	<div id="footer2" class="whitesmokeBG">
+		<a onclick="openWin('https://gardennet.netlify.app')"><img src="../img/fav.png" width="50px"> GardenNet <i>( open in a testing window. )</i></a>
+		<a onclick="openWin('https://gardennet.netlify.app/developers')"><img src="../img/logo.png" width="50px"> Developers <i>( open in a testing window. )</i></a>
+	</div>
 </body>
 <script src="index.js"></script>
 </html>
