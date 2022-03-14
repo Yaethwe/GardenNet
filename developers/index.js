@@ -60,3 +60,9 @@ function darkTheme() {
     footer.className='darksmokeBG';
     footer2.className='darksmokeBG';
 }
+
+function encryptor() {
+    let mw;
+    mw = window.open('./encrypt.html', "ENC", "width=200, height=100");
+    mw.resizeTo(700, 600);
+}
