@@ -66,3 +66,19 @@ function encryptor() {
     mw = window.open('./encrypt.html', "ENC", "width=200, height=100");
     mw.resizeTo(700, 600);
 }
+
+const links = document.querySelectorAll('.menuItems');
+links.forEach(item=>{
+	item.addEventListener('click', ()=>{
+		let el = document.getElementById(item.getAttribute('to'));
+		el.scrollIntoView({behavior:"smooth",block:"start"});
+	});
+});
+
+document.querySelector('#code1').textContent=`
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+`;

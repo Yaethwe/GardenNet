@@ -11,7 +11,7 @@
 </head>
 <body>
 	<div id='nav' class="whitesmokeBG fo">
-		<label class="logoTxt" style="color: orange;">Developers - GardenNet</label>
+		<h1 class="logoTxt" style="color: orange;">Developers - GardenNet</h1>
 		<div class="theme-switch-wrapper">
             <label for="checkbox" class="theme-switch">
                 <input onclick="LDM()" type="checkbox" id="checkbox">
@@ -23,18 +23,30 @@
 	<div id="bodyDiv" class="bodyDiv fo">
 		<div id='menu' class="whiteBG">
 			<ol>
-				<li><a>GardenNet Login library</a></li>
-				<li><a>Explorer Useages</a></li>
+				<li><a class="menuItems" to="liGLL">GardenNet Login library</a></li>
+				<li><a class="menuItems" to="liEU">Explorer Useages</a></li>
+				<li><a class="menuItems" to="liDOWN">Downloads</a></li>
 			</ol>
 		</div>
 		<div id='main' class="whiteBG">
 			<div id="liGLL">
 				<h1 class="logoTxt" style="color: blue;">GardenNet Login Library</h1>
-				<p>GardenNet Login Library is a plugin for other websites which we want them to login with a GardenNet account but however user registration only works in our <a style="color: violet;" href="https://gardennet.netlify.app">GardenNet</a> website.</p>
+				<p>GardenNet Login Library is a plugin for other websites which we want them to login with a GardenNet account but however user registration only works in our <a style="color: violet;" href="https://gardennet.netlify.app">GardenNet</a> website.
+					You can download the libaray here or scroll down to the <a class="menuItems" style="background-color:white;color:violet;" to="liDOWN">Downloads</a>.
+					When you finish the download open the folder, then open "index.html"(make sure your internet connection is stable), then you will see the GardenNet LogIn box. If you open "index.html" in a code editor you will see a few firebase libraries were attached underneath the body element. The firebase libraries are very important because if you don't attach it in your website the GardenNetLoginLibrary will not work.
+					The library is <i>opensource</i> so you can remax or design whatever you want. 
+				</p>
+				<h3 class="logoTxt" style="color: blue;">The firebase liberies that you need to attach in your "index.html"</h3>
+				<code id="code1">
+				</code>
 			</div>
 			<div id="liEU" >
 				<h1 class="logoTxt" style="color: blue;">Explorer Usages</h1>
 				<p>You can go to the Explorer just by clicking <a style="color: violet;" href="https://gardennet.netlify.app/explorer"> here</a> however it can't work because you didn't fill in the <i>gid</i> and <i>gname</i> parameters. "gid" parameter was used to set the UserID of the author. "gname" parameter was used to set the UserID of the author. "gname" parameter was used to set the Title of the post that was created in the author's post box.</p>
+			</div>
+			<div id="liDOWN">
+				<h1 class="logoTxt" style="color: blue;">Downloads</h1>
+				<a href="downloads/GardenNetLoginLibrary.zip">DOWNLOAD the GardenNet Login Library</a>
 			</div>
 		</div>
 		<div id='aside' class="whiteBG" style="justify-content: start;">

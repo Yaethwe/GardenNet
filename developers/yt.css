@@ -70,3 +70,17 @@
 	/*color:black;*/
 	font-size: 16px;
 }
+.menuItems{
+	background-color:gray;
+	color:white;
+	cursor:pointer;
+}
+.menuItems:hover{
+	background-color:gray;
+	color:yellow;
+	cursor:pointer;
+}
+
+#menu{
+	width:30%
+}
