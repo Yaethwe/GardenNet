@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" href="../img/logo.png">
-	<link rel="stylesheet" href="https://gardennet.netlify.app/developers/GardenNetCSSLibrary.css">
+	<link rel="stylesheet" href="GardenNetCSSLibrary.css">
 	<link rel="stylesheet" href="yt.css">
 	<title>Developers - GardenNet</title>
 </head>
@@ -39,6 +39,39 @@
 				<h3 class="logoTxt" style="color: blue;">The firebase liberies that you need to attach in your "index.html"</h3>
 				<code id="code1">
 				</code>
+				<p>
+				First you need to declaire a constant variable which contain GardenNet class.
+					<br>
+					<code style="background-color:#242322;color:white;">
+						<span style="color:violet">const</span> GN = <span style="color:violet">new</span> GardenNet;
+					</code>
+					<br>
+				To initialize the login data you need to type this code at your script file.
+					<br>
+					<code style="background-color:#242322;color:white;">
+						GN.<span style="color:yellow">init()</span>;
+					</code>
+					<br>
+				To pop up the login Box you need to type this code.
+					<br>
+					<code style="background-color:#242322;color:white;">
+						GN.<span style="color:yellow">login()</span>;
+					</code>
+					<br>
+				If the user successfully login you need to get his user data but don't worry the GardenNet Login Library has an object call 
+					<code style="background-color:#242322;color:white;">
+						userdata
+					</code>
+				 you can get the UserName like this 
+				 <code style="background-color:#242322;color:white;">
+						console.<span style="color:yellow">log(</span>userdata.username<span style="color:yellow">)</span>;
+				 </code>
+				 and you can also log all the userdata like this
+				 <code style="background-color:#242322;color:white;">
+						console.<span style="color:yellow">log(</span>userdata<span style="color:yellow">)</span>;
+				 </code>
+				  so you can see all of <i>userdata</i> object in browser console.
+				</p>
 			</div>
 			<div id="liEU" >
 				<h1 class="logoTxt" style="color: blue;">Explorer Usages</h1>
@@ -46,7 +79,7 @@
 			</div>
 			<div id="liDOWN">
 				<h1 class="logoTxt" style="color: blue;">Downloads</h1>
-				<a href="downloads/GardenNetLoginLibrary.zip">DOWNLOAD the GardenNet Login Library</a>
+				<a href="downloads/GardenNetLoginLibrary.zip" class="download">DOWNLOAD the GardenNet Login Library</a>
 			</div>
 		</div>
 		<div id='aside' class="whiteBG" style="justify-content: start;">
