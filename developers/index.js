@@ -19,48 +19,38 @@ function openWin(url) {
 }
 
 /*Light-Dark Mode Switch*/
-const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+var icon = document.getElementById('icon');
 
-const switchTheme = (e) => {
-    if(e.target.checked) {
-        document.documentElement.setAttribute('data-theme' , 'dark');
-        localStorage.setItem('theme' , 'dark')
-    } else {
-        document.documentElement.setAttribute('data-theme' , 'light');
-        localStorage.setItem('theme' , 'light')
-    }
+icon.onclick = function(){
+    document.body.classList.toggle("dark-theme");
+    nav.style.backgroundColor='#333';
+    menu.style.backgroundColor='#333';
+    menu.style.color="white";
+    main.style.backgroundColor='#333';
+    main.style.color="white";
+    aside.style.backgroundColor='#333';
+    aside.style.color="white";
+    footer.style.backgroundColor='#333';
+    footer.style.color="white";
+    footer2.style.backgroundColor='#333';
+    footer2.style.color="white";
+    if(document.body.classList.contains("dark-theme")) {
+        icon.src ="darkthemeicon/sun.png";
+    }else{
+        icon.src ="darkthemeicon/moon.png";
+        nav.style.backgroundColor='white';
+        menu.style.backgroundColor='white';
+        menu.style.color="black";
+        main.style.backgroundColor='white';
+        main.style.color="black";
+        aside.style.backgroundColor='white';
+        aside.style.color="black";
+        footer.style.backgroundColor='white';
+        footer.style.color="black";
+        footer2.style.backgroundColor='white';
+        footer2.style.color="black";
+    };
 };
-
-const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
-
-if(currentTheme){
-    document.documentElement.setAttribute('data-theme' , currentTheme);
-
-    if(currentTheme == 'dark'){
-        toggleSwitch.checked = true;
-        darkTheme();
-    }
-}
-
-toggleSwitch.addEventListener('change', switchTheme)
-
-function LDM() {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
-    darkTheme();
-}
-
-function darkTheme() {
-    body.setAttribute('class','darkBG');
-    body.setAttribute('style','');
-    nav.className='darksmokeBG';
-    menu.className='darksmokeBG';
-    main.className='darksmokeBG';
-    aside.className='darksmokeBG';
-    footer.className='darksmokeBG';
-    footer2.className='darksmokeBG';
-}
-
 function encryptor() {
     let mw;
     mw = window.open('./encrypt.html', "ENC", "width=200, height=100");
