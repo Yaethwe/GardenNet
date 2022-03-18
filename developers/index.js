@@ -34,6 +34,7 @@ icon.onclick = function(){
     footer.style.color="white";
     footer2.style.backgroundColor='#333';
     footer2.style.color="white";
+    body.style.backgroundColor='#333';
     if(document.body.classList.contains("dark-theme")) {
         icon.src ="darkthemeicon/sun.png";
     }else{
@@ -49,6 +50,7 @@ icon.onclick = function(){
         footer.style.color="black";
         footer2.style.backgroundColor='white';
         footer2.style.color="black";
+        body.style.backgroundColor='thistle';
     };
 };
 function encryptor() {
