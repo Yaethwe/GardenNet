@@ -10,3 +10,12 @@ a{
     font-family: sans-serif;
     font-size: 18px;
 }
+#nav{
+    width:100vw;
+    margin: auto;
+    position: sticky;
+    top:0;
+    left:0;
+    opacity:0.9;
+    background-color: darkgray;
+}

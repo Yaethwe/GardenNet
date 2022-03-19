@@ -9,12 +9,13 @@ color:gray;
 `;
 auth.init();
 auth.login();
-const mainDiv = document.createElement('div'); 
+const nav = document.querySelector('#nav');
+const mainDiv = document.createElement('div');
 let goToProfile = document.createElement('button');
 goToProfile.style=btnStyle;
 goToProfile.textContent="Profile";
 mainDiv.appendChild(goToProfile);
-body.appendChild(mainDiv);
+nav.appendChild(mainDiv);
 
 goToProfile.onclick=()=>{
     openProfile();
