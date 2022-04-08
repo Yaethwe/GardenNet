@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Garden Net</title>
+    <link rel="stylesheet" href="styles.min.css">
+    <link rel="stylesheet" href="navbarstyles.min.css">
+    <link rel="icon" href="img/fav.png">
+</head>
+
+<body>
+    <div id="logoDiv">
+        <a href="https://gardennet.netlify.app/" style="text-decoration : none;"><div><img src="img/fav.png" class="logoImg" alt="G"> <label class="logoTxt">Garden Net</label></div></a>
+        <div id="menu" style="display:block">
+            <div class="topnav" id="myTopnav"><a href="index.html" class="commonMenu">&#10026 Home</a> <a href="explore.html" class="active">Explore</a> <a href="create.html" target="_blank" class="commonMenu">Create</a> <a href="explorer.html?gid=2&gname=UserGuide" target="_blank" class="commonMenu">User Guide</a>                <a href="javascript:void(0);" class="icon" onclick="burgerBarClicked()"><img class="icoi" src="img/bgmenu.png" alt="menu"></a></div>
+        </div>
+    </div>
+    <div id="viewportDiv"></div>
+</body>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+<script src="../navbar.min.js"></script>
+<script src="script.js"></script>
+
+</html>
