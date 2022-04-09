@@ -28,6 +28,7 @@ function post(){
 					1:"YeaeThawe",
 				},
 			});
+			alert('Created Successfully!');
 		}else{
 			wrong.style.display='block';
 		}
