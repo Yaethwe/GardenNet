@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Post Add To Explore - Garden Net</title>
+    <link rel="stylesheet" href="../styles.min.css">
+    <link rel="icon" href="../img/fav.png">
+	<style>
+	body{
+	background-image:none;
+	}
+	</style>
+</head>
+
+<body>
+	<div style='height:25vh'></div>
+    <div id="viewportDiv" class="commonDiv" style='box-shadow:10px 10px 10px 10px gray;border-top-left-radius:10px;border-top-right-radius:10px;'>
+		<input class="inBox" placeholder="PostName" id="pn">
+		<input class="inBox" placeholder="PostLink" id="pl"><br>
+		<label id='wrong' style='color:red;font-family:sans-serif;'>Wrong URL</label>
+		<input type="button" class="commonBtn" value="POST" onclick="post()">
+	</div>
+</body>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+<script src="script.js"></script>
+</html>
