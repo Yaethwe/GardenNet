@@ -1,13 +1,13 @@
 const viewport = document.getElementById("viewportDiv"),
-    firebaseConfig = {
-        apiKey: "AIzaSyBaPvnzqor_4HfPZg6ayk30Tb1RpcMBWfo",
-        authDomain: "test-66b58.firebaseapp.com",
-        projectId: "test-66b58",
-        storageBucket: "test-66b58.appspot.com",
-        messagingSenderId: "39985206495",
-        appId: "1:39985206495:web:c4200c42a6e7bad4da456a",
-        measurementId: "G-G1RBDR6H1S",
-    };
+firebaseConfig = {
+	apiKey: "AIzaSyBaPvnzqor_4HfPZg6ayk30Tb1RpcMBWfo",
+	authDomain: "test-66b58.firebaseapp.com",
+	projectId: "test-66b58",
+	storageBucket: "test-66b58.appspot.com",
+	messagingSenderId: "39985206495",
+	appId: "1:39985206495:web:c4200c42a6e7bad4da456a",
+	measurementId: "G-G1RBDR6H1S",
+};
 firebase.initializeApp(firebaseConfig);
 const ddbb = firebase.database().ref();
 let userID,country,userName;
@@ -22,11 +22,10 @@ function load(){
 	while (viewport.firstChild) {
 		viewport.removeChild(viewport.lastChild);
 	}
-	console.log(list);
 	let db = list.list;
-	
 	for(i in list.list){
 		let tl=0;
+		let postname = i; 
 		let liked = false;
 		const box = document.createElement('div');
 		for(a in db[i].likes){
@@ -42,51 +41,45 @@ function load(){
 		ddbb.child('mails').child(LPU.get('gid')).child('mails').child(LPU.get('gname')).get().then(snapshot=>{
 			if (snapshot.exists()){
 				CPD=snapshot.val()
-				next();
+				if(liked){
+					box.innerHTML=`
+					<center>
+						<label style='color:blue;font-family:sans-serif;font-size:20px;'>${postname}</label>
+						<div>
+							<label>Author: ${CPD.user}</label><br>
+							<div>
+							${CPD.body}
+							</div>
+						</div>
+						<div>
+							<div>
+							<img src='../img/like.png' width='30px' style='opacity:0.5;' title='already liked'><br><label>${tl}</label>
+							</div>
+						<div>
+					</center><br><br>`;
+				}else{
+					box.innerHTML=`
+					<center>
+						<label style='color:blue;font-family:sans-serif;font-size:20px;'>${postname}</label>
+						<div>
+							<label>Author: ${CPD.user}</label><br>
+							<div>
+							${CPD.body}
+							</div>
+						</div>
+						<div>
+							<div>
+							<a onclick="likeTo('${postname}')"><img src='../img/like.png' width='30px' title='click to like'></a><br><label>${tl}</label>
+							</div>
+						<div>
+					</center><br><br>`;
+				}
+				box.className='box01'
+				viewport.appendChild(box);
 			}else{
 				console.log('1 post not found');
 			}
 		});
-		
-		function next(){
-			if(liked){
-				box.innerHTML=`
-				<center>
-					<label style='color:blue;font-family:sans-serif;font-size:40px;'>${db[i].name}</label>
-					<div>
-						<label>Author: ${CPD.user}</label><br>
-						<div>
-						${CPD.body}
-						</div>
-					</div>
-					<div>
-						<div>
-						<img src='../img/like.png' width='30px' style='opacity:0.5;' title='already liked'><br><label>${tl}</label>
-						</div>
-					<div>
-				</center>`;
-			}else{
-				box.innerHTML=`
-				<center>
-					<label style='color:blue;font-family:sans-serif;font-size:40px;'>${db[i].name}</label>
-					<div>
-						<label>Author: ${CPD.user}</label><br>
-						<div>
-						${CPD.body}
-						</div>
-					</div>
-					<div>
-						<div>
-						<a onclick="likeTo('${db[i].name}')"><img src='../img/like.png' width='30px' title='click to like'></a><br><label>${tl}</label>
-						</div>
-					<div>
-				</center>`;
-			}
-			box.style=`
-				box-shadow:5px 5px 5px gray;
-			`;
-			viewport.appendChild(box);
-		}
 	}
 }
 
