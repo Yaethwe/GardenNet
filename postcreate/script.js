@@ -12,6 +12,7 @@ const ddbb = firebase.database().ref();
 
 const pn = document.querySelector('#pn');
 const pl = document.querySelector('#pl');
+const del = document.querySelector('#del');
 const wrong = document.querySelector('#wrong');
 wrong.style.display='none';
 
@@ -35,6 +36,11 @@ function post(){
 	}else{
 		wrong.style.display='block';
 	}
+}
+
+function deletePost(){
+	ddbb.child('posts').child('myanmar').child(del.value).set({});
+	alert('deleted Successfully!');
 }
 
 pl.addEventListener('change',()=>{

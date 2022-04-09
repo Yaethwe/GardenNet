@@ -16,12 +16,19 @@
 </head>
 
 <body>
-	<div style='height:25vh'></div>
+	<div style='height:10vh'></div>
     <div id="viewportDiv" class="commonDiv" style='box-shadow:10px 10px 10px 10px gray;border-top-left-radius:10px;border-top-right-radius:10px;'>
+		<label style='font-family:sans-serif;font-size:20px;color:orange;padding:5px;display:flex;align-self:center;'>Add Your Post</label>
 		<input class="inBox" placeholder="PostName" id="pn">
 		<input class="inBox" placeholder="PostLink" id="pl"><br>
 		<label id='wrong' style='color:red;font-family:sans-serif;'>Wrong URL</label>
 		<input type="button" class="commonBtn" value="POST" onclick="post()">
+	</div>
+	<div style='height:10vh'></div>
+	<div id="viewportDiv" class="commonDiv" style='box-shadow:10px 10px 10px 10px gray;border-top-left-radius:10px;border-top-right-radius:10px;'>
+		<label style='font-family:sans-serif;font-size:20px;color:orange;padding:5px;display:flex;align-self:center;'>Delete Your Post</label>
+		<input class="inBox" placeholder="PostName" id="del">
+		<input type="button" class="commonBtn" value="DELETE" onclick="deletePost()">
 	</div>
 </body>
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
